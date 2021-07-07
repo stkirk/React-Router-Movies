@@ -15,7 +15,7 @@ function MovieDetails(props) {
   const { id, title, director, metascore } = props.movie;
 
   const location = useLocation();
-  console.log("Movie-List location", location);
+  // console.log("Movie-List location", location);
 
   return (
     <div className="movie-card">
@@ -37,6 +37,7 @@ function MovieDetails(props) {
 // one route for / that loads the MovieList component. This component will need the movies injected into it via props.
 
 // one route that will take an id parameter after/movies/ (ex: /movies/2, /movies/3 where the id is dynamic). This route should load the Movie component.
+
 // Add Functionality
 // When a user clicks on the movie card inside MovieList they should be taken to /movies/{id of clicked movie here} to see the details of the selected movie.
 // You will need to modify line 7 of Movie.js to get the id of the selected movie from the URL.

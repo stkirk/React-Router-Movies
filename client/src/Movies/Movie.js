@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useParams, useRouteMatch, useLocation } from "react-router-dom";
 
-export default function Movie(props) {
+export default function Movie({ movies }) {
   const [movie, setMovie] = useState();
 
-  let id = 1;
+  console.log("Movie props", movies);
+
+  //grab URL to compare to id
+  const params = useParams();
+  console.log("Movie params", params);
+
+  let id =
+    movies.find((index) => {
+      return index.id == params.id;
+    }) || {};
+  console.log("Movie id", id);
+
   // Change ^^^ that line and use a hook to obtain the :id parameter from the URL
 
   useEffect(() => {
@@ -29,6 +41,7 @@ export default function Movie(props) {
     return <div>Loading movie information...</div>;
   }
 
+  //deconstruct props
   const { title, director, metascore, stars } = movie;
 
   return (
