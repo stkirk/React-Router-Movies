@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams, useRouteMatch, useLocation } from "react-router-dom";
 
 export default function Movie(props) {
-  const [movie, setMovie] = useState();
+  const [movie, setMovie] = useState({ stars: [] });
 
   //grab URL to compare to id
   const params = useParams();

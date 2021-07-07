@@ -45,12 +45,12 @@ export default function App() {
       <Switch>
         {/* Most specific at top */}
         <Route path="/movies/:id">
-          <Movie movies={movieList} />
+          <Movie />
         </Route>
 
         {/* Least specific at bottom */}
         <Route path="/">
-          <MovieList />
+          <MovieList movies={movieList} />
         </Route>
       </Switch>
     </div>
