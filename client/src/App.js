@@ -50,7 +50,7 @@ export default function App() {
 
         {/* Least specific at bottom */}
         <Route path="/">
-          <MovieList movies={movieList} />
+          <MovieList />
         </Route>
       </Switch>
     </div>
